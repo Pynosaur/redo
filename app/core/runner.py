@@ -68,9 +68,9 @@ def _print_summary(results, total_requested, total_elapsed):
 
     parts = []
     if failed:
-        parts.append(f"\033[32m{passed}\033[0m/\033[31m{ran}\033[0m passed")
+        parts.append(f"\033[32m{passed}\033[0m/\033[31m{ran}\033[0m executed")
     else:
-        parts.append(f"\033[32m{ran}/{ran}\033[0m passed")
+        parts.append(f"\033[32m{ran}/{ran}\033[0m executed")
 
     parts.append(f"total {_fmt(total_elapsed)}")
     parts.append(f"avg {_fmt(avg)}")
