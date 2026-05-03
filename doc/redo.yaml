@@ -1,0 +1,33 @@
+NAME: redo
+FULL_NAME: "Python Command Repeater"
+VERSION: "0.1.0"
+DESCRIPTION: >
+  Repeat any shell command a specified number of times with optional interval,
+  stop-on-failure, and quiet mode. Prints per-run status with timing and a
+  summary line with pass/fail count, total time, average, min, and max.
+  Pure Python, stdlib only.
+USAGE:
+  - "redo 'command' -t N"
+  - "redo 'command' -t N -i S"
+  - "redo -t N -i S 'command'"
+  - "redo 'command' -t N -s"
+  - "redo 'command' -t N -q"
+OPTIONS:
+  - "-h, --help              Show help message"
+  - "-v, --version           Show version information"
+  - "-t N                    Number of times to repeat (default: 1)"
+  - "-i S                    Interval in seconds between runs (default: 0)"
+  - "-s                      Stop on first failure"
+  - "-q                      Quiet mode, only show summary"
+EXAMPLES:
+  - "redo 'curl -s google.com' -t 5                # 5 times, no delay"
+  - "redo 'curl -s google.com' -t 20 -i 5          # 20 times, 5s apart"
+  - "redo 'make test' -t 10 -s                     # 10 times, stop on fail"
+  - "redo 'ping -c1 8.8.8.8' -t 100 -i 1 -q       # 100 pings, quiet"
+  - "redo -t 3 -i 2 'python script.py'             # flags first"
+OUTPUT: >
+  Per-run lines showing [N/total] with checkmark or cross, elapsed time, and
+  exit code on failure. Final summary line with pass/fail ratio, total time,
+  average, min, and max durations.
+AUTHOR: "@spacemany2k38"
+DATE: "2026-05-03"
