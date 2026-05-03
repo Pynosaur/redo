@@ -62,7 +62,7 @@ def main():
     # Parse freely-ordered flags and the quoted command
     command = None
     times = 1
-    interval = 0.0
+    interval = 1.0
     stop_on_fail = False
     quiet = False
     listen = False

@@ -19,7 +19,7 @@ OPTIONS:
   - "-h, --help              Show help message"
   - "-v, --version           Show version information"
   - "-t N                    Number of times to repeat (0 = infinite, default: 1)"
-  - "-i S                    Interval in seconds between runs (default: 0)"
+  - "-i S                    Interval in seconds between runs (default: 1)"
   - "-l                      Listen mode: wait for Enter between runs (q to quit)"
   - "-s                      Stop on first failure"
   - "-q                      Quiet mode, only show summary"
