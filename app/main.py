@@ -65,6 +65,7 @@ def main():
     interval = 0.0
     stop_on_fail = False
     quiet = False
+    listen = False
 
     i = 0
     while i < len(args):
@@ -78,8 +79,8 @@ def main():
                 times = int(args[i])
             except ValueError:
                 _die(f"invalid count: {args[i]}")
-            if times < 1:
-                _die("count must be at least 1")
+            if times < 0:
+                _die("count must be 0 or higher")
 
         elif a == "-i":
             i += 1
@@ -98,6 +99,9 @@ def main():
         elif a == "-q":
             quiet = True
 
+        elif a == "-l":
+            listen = True
+
         elif a.startswith("-"):
             _die(f"unknown option: {a}")
 
@@ -111,7 +115,11 @@ def main():
     if command is None:
         _die("no command specified")
 
-    return run(command, times, interval, stop_on_fail, quiet)
+    # -l without -t means infinite listen
+    if listen and times == 1:
+        times = 0
+
+    return run(command, times, interval, stop_on_fail, quiet, listen)
 
 
 def _die(msg):
