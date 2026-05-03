@@ -1,6 +1,6 @@
 NAME: redo
 FULL_NAME: "Python Command Repeater"
-VERSION: "0.1.0"
+VERSION: "0.1.1"
 DESCRIPTION: >
   Repeat any shell command a specified number of times with optional interval,
   stop-on-failure, and quiet mode. Prints per-run status with timing and a
