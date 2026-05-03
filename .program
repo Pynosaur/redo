@@ -1,5 +1,5 @@
 name: redo
-version: 0.2.0
+version: 0.2.1
 author: @spacemany2k38
 description: Repeat a command N times with timing summary
 type: cli-tool
