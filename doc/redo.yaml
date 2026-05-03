@@ -24,15 +24,15 @@ OPTIONS:
   - "-s                      Stop on first failure"
   - "-q                      Quiet mode, only show summary"
 EXAMPLES:
-  - "redo 'curl -s google.com' -t 5                # 5 times, no delay"
-  - "redo 'curl -s google.com' -t 20 -i 5          # 20 times, 5s apart"
-  - "redo 'curl -s google.com' -t 0                # infinite, Ctrl+C to stop"
-  - "redo 'curl -s google.com' -t 0 -i 2           # infinite, 2s apart"
-  - "redo 'make test' -l                            # listen: Enter to repeat, q to quit"
-  - "redo 'make test' -l -t 5                       # listen, capped at 5"
-  - "redo 'make test' -t 10 -s                     # 10 times, stop on fail"
-  - "redo 'ping -c1 8.8.8.8' -t 100 -i 1 -q       # 100 pings, quiet"
-  - "redo -t 3 -i 2 'python script.py'             # flags first"
+  - "redo 'curl -s google.com' -t 5           # 5 times, no delay"
+  - "redo 'curl -s google.com' -t 20 -i 5     # 20 times, 5s apart"
+  - "redo 'curl -s google.com' -t 0           # infinite, Ctrl+C to stop"
+  - "redo 'curl -s google.com' -t 0 -i 2      # infinite, 2s apart"
+  - "redo 'make test' -l                      # listen: Enter to repeat, q to quit"
+  - "redo 'make test' -l -t 5                 # listen, capped at 5"
+  - "redo 'make test' -t 10 -s                # 10 times, stop on fail"
+  - "redo 'ping -c1 8.8.8.8' -t 100 -i 1 -q   # 100 pings, quiet"
+  - "redo -t 3 -i 2 'python script.py'        # flags first"
 OUTPUT: >
   Per-run lines showing [N/total] with checkmark or cross, elapsed time, and
   exit code on failure. Final summary line with pass/fail ratio, total time,
