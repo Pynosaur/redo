@@ -2,7 +2,7 @@
 
 Repeat any shell command N times with timing summary.
 
-Version: 0.1.0
+Version: 0.2.1
 
 ## Features
 
